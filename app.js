@@ -29,6 +29,10 @@ app.get("/contact", (req, res) => {
   res.render("contact", { content: contactContent });
 });
 
+app.get("/compose", (req, res) => {
+  res.render("compose");
+});
+
 app.listen(PORT, function () {
   console.log(`Server started on port ${PORT}`);
 });
