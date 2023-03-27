@@ -41,6 +41,11 @@ app.post("/compose", (req, res) => {
   res.redirect("/");
 });
 
+app.get("/posts/:postId", (req, res) => {
+  const postId = req.params.postId;
+  res.render("post", { post: posts[postId] });
+});
+
 app.listen(PORT, function () {
   console.log(`Server started on port ${PORT}`);
 });
