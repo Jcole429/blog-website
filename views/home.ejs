@@ -10,7 +10,11 @@
             </h3>
         </a>
         <p>
-            <%= post.body %>
+            <% if (post.body.length> 100) {%>
+                <%= post.body.substring(0,100) + " ..." ; %>
+                    <%} else {%>
+                        <%=post.body;%>
+                            <%}%>
         </p>
         <% })%>
             <%- include("partials/footer");%>
